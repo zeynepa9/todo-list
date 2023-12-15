@@ -1,0 +1,163 @@
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: #EDECE1;
+  }
+  
+
+  #sidebar {
+    background-color: #EDE9E1;
+    width: 250px; 
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 20px; 
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+
+  .sidebar-item {
+    padding: 20px 30px; 
+    color: #333;
+    cursor: pointer;
+    font-size: 18px;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .sidebar-item:hover {
+    background-color: #f9f9f9;
+  }
+  
+
+  .add-project-btn {
+    display: block;
+    width: 90%;
+    margin: 10px auto; 
+    padding: 10px;
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .add-project-btn:hover {
+    background-color: #75c940;
+  }
+  
+
+  #content {
+    margin-left: 250px; 
+    padding: 20px;
+    background: #fff;
+    min-height: 100vh;
+  }
+  
+
+ 
+  
+
+  .content-heading {
+    font-size: 20px;
+    margin-bottom: 15px;
+    
+  }
+  
+
+  .content-details {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+  }
+  
+
+  .content-section {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+  }
+  
+ 
+
+
+  #add-task-btn {
+    font-size: 16px;
+    padding: 5px 10px;
+    margin: 20px 0;
+    background-color: #f2d600; 
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  #add-task-btn:hover {
+    background-color: #75c940;
+  }
+  
+
+ 
+
+
+.popup {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 250px; 
+    position: fixed; 
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white; 
+    padding: 20px; 
+    border: 1px solid #ccc; 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
+    z-index: 1000; 
+    width: 400px; 
+    height: 300px; 
+  }
+  
+
+  #todo-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px; 
+    justify-content: flex-start; 
+    align-items: stretch; 
+  }
+
+  .todo-item {
+    background-color: #fff; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px; 
+    border-radius: 4px; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+  }
+  
+
+.todo-label {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+}
+
+
+.todo-item.completed {
+  text-decoration: line-through; /* Üstünü çiz */
+  background-color: #f8f8f8; /* Hafif gri arka plan */
+  color: #b8b8b8; /* Metni soluk göster */
+}
+
+
+
+
