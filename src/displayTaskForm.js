@@ -1,5 +1,6 @@
 
 import { submitTodo } from './submitTodo.js'; 
+import { projects } from './submitProject.js'; // Projeleri içe aktar
 let activePopup = null; // Aktif pop-up'ı saklamak için bir değişken
 
 //new
@@ -53,6 +54,31 @@ function displayTaskForm() {
     const notesInput = document.createElement('textarea');
     notesInput.id = 'notes';
     notesInput.placeholder = 'Additional Notes';
+
+
+    //added
+  
+  // Proje seçimi için dropdown menü
+  const projectSelect = document.createElement('select');
+  projectSelect.id = 'project-select';
+
+  // 'Demo Project' ID'sini bul
+  const demoProject = projects.find(project => project.name === 'Demo Project');
+  let demoProjectId = demoProject ? demoProject.id : 'demo'; // Varsayılan değer olarak 'demo' kullan
+
+  projects.forEach(project => {
+      const option = document.createElement('option');
+      option.value = project.id;
+      option.textContent = project.name;
+      projectSelect.appendChild(option);
+
+      // Eğer bu 'Demo Project' ise, seçili yap
+      if (project.id === demoProjectId) {
+          option.selected = true;
+      }
+  });
+
+    //added
   
    
     // Gönder buton
@@ -63,12 +89,14 @@ function displayTaskForm() {
 
     submitButton.addEventListener('click', function(event) {
         event.preventDefault(); // Form gönderimini engelleyin
-        submitTodo(); // Todo ekleme fonksiyonunu çalıştırın
+        const selectedProjectId = projectSelect.value;
+        submitTodo(selectedProjectId); // Seçilen projenin ID'sini geçir
       });
       
 
   
     // Form elemanlarını form container'a ekle
+    formContainer.appendChild(projectSelect); //added
     formContainer.appendChild(titleInput);
     formContainer.appendChild(descriptionInput);
     formContainer.appendChild(dueDateInput);

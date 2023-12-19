@@ -9,8 +9,8 @@ console.log('Todo App is working!');
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    loadTodosFromLocalStorage();
     loadProjectsFromLocalStorage();
+    loadTodosFromLocalStorage();
     loadHome();
 
 });

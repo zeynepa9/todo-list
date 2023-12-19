@@ -16,7 +16,7 @@ function loadHome() {
     todoList.id = 'todo-list';
     
     const projectList = document.getElementById('project-list') || document.createElement('div');
-    projectList.id = 'project-list'; // Burada yanlışlıkla todoList.id olarak ayarlanıyor
+    projectList.id = 'project-list'; 
     
 
     

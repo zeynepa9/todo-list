@@ -10,6 +10,9 @@ import displayTodoItems from './displayTodoItems.js';
         const todoList = document.getElementById('todo-list');
         todoList.innerHTML = '';
 
+        // const projectList = document.getElementById('project-list');
+        // projectList.innerHTML = '';
+
 
         todos.forEach(todo => displayTodoItems(todo));
     }

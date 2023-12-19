@@ -1,6 +1,9 @@
 
   import { deleteItem } from './deleteItem.js';
+  import { projects } from './submitProject.js'; //
   import saveTodosToLocalStorage from './saveTodosToLocalStorage.js';
+  import { getProjectColor } from './getRandomColor.js';
+
 
   function displayTodoItems(todo) {
 
@@ -37,6 +40,7 @@
         }
     });
 
+
     // Todo heading  span
     const todoTitle = document.createElement('span');
     todoTitle.classList.add('todo-title');
@@ -46,6 +50,29 @@
     const label = document.createElement('label');
     label.appendChild(completedCheckbox);
     label.appendChild(todoTitle);
+
+
+     // Proje adını göster
+     const projectInfo = document.createElement('span');
+     projectInfo.classList.add('todo-project-info');
+
+
+   // Seçilen projeyi bul
+const selectedProject = projects.find(project => project.id === todo.projectId);
+if (selectedProject) {
+    // Proje etiketini oluştur ve ekle
+    const projectTag = document.createElement('span');
+    projectTag.className = 'project-tag';
+    projectTag.textContent = selectedProject.name;
+    // Fonksiyon ile projenin atanmış rengini al ve arka plan rengi olarak ayarla
+    projectTag.style.backgroundColor = getProjectColor(selectedProject.name);
+    projectInfo.appendChild(projectTag); // Proje bilgisine etiketi ekle
+} else {
+    // Eğer proje bulunamazsa veya 'None' ise etiket ekleme
+    projectInfo.textContent = 'Project: None';
+}
+    
+
 
     // Other todo info
     const todoDescription = document.createElement('p');
@@ -66,6 +93,7 @@
 
     // add all items to todo item
     todoItem.appendChild(label);
+    todoItem.appendChild(projectInfo);
     todoItem.appendChild(todoDescription);
     todoItem.appendChild(todoDueDate);
     todoItem.appendChild(todoPriority);

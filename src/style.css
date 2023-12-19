@@ -1,11 +1,53 @@
 
+
 body, html {
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif;
-    background: #EDECE1;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: #FCD7E9;
   }
   
+  .main-title {
+    position: relative;
+    display: inline-block;
+    padding: 20px 40px;
+    color: #333; /* Metin rengi */
+    font-size: 32px; /* Metin boyutu */
+    text-align: center;
+    background: linear-gradient(135deg, #ff4081 20%, #f2d600 40%, #75c940 60%, #C740FF 80%);
+    border-radius: 20px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    width: 92%; 
+  }
+  
+  .main-title::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border-radius: 50%;
+    transform: scaleX(1.5) translate(0, -60%);
+    transform-origin: bottom center;
+    z-index: -1;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .main-title:hover::before {
+    transform: scaleX(1.5) translate(0, -70%);
+  }
+  
+  .main-title span {
+    position: relative;
+    z-index: 2;
+  }
+  
+
+
+
 
   #sidebar {
     background-color: #EDE9E1;
@@ -54,7 +96,7 @@ body, html {
   #content {
     margin-left: 250px; 
     padding: 20px;
-    background: #fff;
+    background: #F3F3EF;
     min-height: 100vh;
   }
   
@@ -228,7 +270,7 @@ body, html {
   align-items: center;
   justify-content: space-between; 
   gap: 10px;
-  background-color: #AA637B;
+  background-color: rgba(255, 64, 129, 0.5); /* %50 saydamlık */
 }
 
 #project-list {
@@ -255,3 +297,21 @@ body, html {
   text-align: center;
   cursor: pointer;
 }
+
+.project-tag {
+  display: inline-block;
+  padding: 2px 8px;
+  margin: 0 5px;
+  background-color: #CCCCCC; /* Geçici bir renk */
+  color: white;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.project-tag::before {
+  content: '#';
+}
+
+
+
