@@ -6,6 +6,10 @@ function displayCompletedTodos() {
     const todoList = document.getElementById('todo-list');
     todoList.innerHTML = ''; // Mevcut görevleri temizle
 
+    const projectList = document.getElementById('project-list');
+    projectList.innerHTML = '';
+
+
     todos.filter(todo => todo.completed).forEach(completedTodo => {
         displayTodoItems(completedTodo);
     });

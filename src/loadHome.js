@@ -4,15 +4,21 @@ import displayUpcoming from './displayUpcoming';
 import allItems from './allItems';
 import displayImportantTodos from './displayImportantTodos';
 import displayCompletedTodos from './displayCompletedTodos';
+import displayProjectForm from './displayProjectForm';
+import displayProjectsOnProjects from './displayProjectsOnProjects';
 
 
 
 function loadHome() {
     const content = document.getElementById('content');
 
-       // Mevcut 'todo-list' div'ini koruyun
-       const todoList = document.getElementById('todo-list') || document.createElement('div');
-       todoList.id = 'todo-list';
+    const todoList = document.getElementById('todo-list') || document.createElement('div');
+    todoList.id = 'todo-list';
+    
+    const projectList = document.getElementById('project-list') || document.createElement('div');
+    projectList.id = 'project-list'; // Burada yanlışlıkla todoList.id olarak ayarlanıyor
+    
+
     
     // Sidebar creation
     const sidebar = document.createElement('aside');
@@ -57,11 +63,14 @@ function loadHome() {
     const projectsContainer = document.createElement('div');
     projectsContainer.textContent = 'Projects';
     projectsContainer.classList.add('sidebar-item');
+    projectsContainer.addEventListener('click', displayProjectsOnProjects);
+    
     
     // Add button for new project
     const addProjectButton = document.createElement('button');
     addProjectButton.textContent = 'New Project';
     addProjectButton.classList.add('add-project-btn');
+    addProjectButton.addEventListener('click', displayProjectForm);
     
     // Append sidebar items to sidebar
      sidebar.appendChild(allItemsLink);
@@ -98,6 +107,7 @@ function loadHome() {
     content.appendChild(mainTitle);
     content.appendChild(mainContent);
     content.appendChild(todoList);
+    content.appendChild(projectList);
 
 
  

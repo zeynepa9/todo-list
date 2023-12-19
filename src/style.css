@@ -109,8 +109,8 @@ body, html {
 .popup {
     display: flex;
     flex-direction: column;
+      justify-content: center;
     gap: 10px;
-    width: 250px; 
     position: fixed; 
     left: 50%;
     top: 50%;
@@ -120,8 +120,11 @@ body, html {
     border: 1px solid #ccc; 
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
     z-index: 1000; 
-    width: 400px; 
-    height: 300px; 
+    max-width: 800px; /* Maksimum genişlik sınırı */
+    min-width: 450px; /* Minimum genişlik sınırı */
+    height: auto; /* Yükseklik otomatik olarak ayarlanır */
+    max-height: 300px; /* Maksimum yükseklik sınırı */
+    min-height: 100px; /* Minimum yükseklik sınırı */
   }
   
 
@@ -159,5 +162,96 @@ body, html {
 }
 
 
+.delete-item-button {
+  display: block;
+  width: 10%;
+  padding: 5px;
+  background-color: #EB2B14;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+}
 
 
+
+#project-form-container {
+  display: flex; /* Flexbox modelini kullanarak */
+  flex-direction: column; /* Çocukları dikey olarak hizala */
+  align-items: stretch; /* Tüm çocukları genişlet ve kenarlarına kadar doldur */
+  gap: 10px; /* Elemanlar arasında boşluk */
+  padding: 20px; /* İç boşluk */
+  background-color: white; /* Arka plan rengi */
+  border: 1px solid #ccc; /* Kenarlık */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Gölge efekti */
+  width: 400px; /* Genişlik */
+  max-width: 100%; /* Genişlik maksimum %100 (ekran dar ise) */
+}
+
+#project-title-input,
+#project-description-input,
+#project-due-date-input {
+  width: 100%; /* Tam genişlik kullan */
+  margin-bottom: 10px; /* Alt elemanlardan boşluk */
+}
+
+#project-description-input {
+  height: 100px; /* Textarea yüksekliği */
+}
+
+#project-submit-button,
+#project-close-button {
+  padding: 10px 20px; /* İç boşluk */
+  cursor: pointer; /* İmleç şekli */
+  border: 1px solid #ccc; /* Kenarlık */
+  background-color: #f8f8f8; /* Arka plan rengi */
+}
+
+#project-close-button {
+  background-color: #e8e8e8; /* Kapatma butonu için farklı arka plan rengi */
+}
+
+#project-submit-button:hover,
+#project-close-button:hover {
+  background-color: #d8d8d8; /* Üzerine gelince renk değişimi */
+}
+
+
+.project-item {
+  background-color: #fff; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 15px; 
+  border-radius: 4px; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  gap: 10px;
+  background-color: #AA637B;
+}
+
+#project-list {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px; 
+  justify-content: flex-start; 
+  align-items: stretch; 
+
+}
+
+
+.delete-project-button{
+  display: block;
+  width: 10%;
+  padding: 5px;
+  background-color: #EB2B14;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+}
