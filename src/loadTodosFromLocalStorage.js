@@ -17,6 +17,7 @@ function loadTodosFromLocalStorage() {
               todoData.projectId,
               todoData.projectName // Proje adı bilgisini Todo nesnesine ekleyin
             );
+            todo.completed = todoData.completed;
             todos.push(todo);
             displayTodoItems(todo);
         });

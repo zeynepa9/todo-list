@@ -1,5 +1,6 @@
 import { projects } from './submitProject.js'; // Projeleri içe aktar
 import { deleteProject } from './deleteProject.js';
+import displayProjectItems from './displayProjectItems.js';
 
 
 function displayProjects(projectsToShow) {
@@ -26,6 +27,17 @@ function displayProjects(projectsToShow) {
       const projectDueDate = document.createElement('p');
       projectDueDate.textContent = `Due Date: ${project.dueDate}`;
 
+    // Details button
+    const detailsButton = document.createElement('button');
+    detailsButton.textContent = 'Details';
+    detailsButton.classList.add('details-project-button');
+    detailsButton.dataset.projectId = project.id;
+    detailsButton.addEventListener('click', function(event) {
+        // Burada todo-item'ları gösterme işlevini çağırabilirsiniz
+        displayProjectItems(event.currentTarget.dataset.projectId);
+    });
+
+
       const deleteButton = document.createElement('button');
       deleteButton.textContent = 'Delete';
       deleteButton.classList.add('delete-project-button');
@@ -39,6 +51,7 @@ function displayProjects(projectsToShow) {
       projectItem.appendChild(projectName);
       projectItem.appendChild(projectDescription);
       projectItem.appendChild(projectDueDate);
+      projectItem.appendChild(detailsButton);
       projectItem.appendChild(deleteButton);
 
       projectList.appendChild(projectItem);
