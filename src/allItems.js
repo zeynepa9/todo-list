@@ -1,4 +1,4 @@
-import { todos } from './submitTodo.js'; // veya todos dizisinin tanımlandığı dosya
+import { todos } from './submitTodo.js'; 
 import displayTodoItems from './displayTodoItems.js';
 
 
@@ -6,7 +6,7 @@ import displayTodoItems from './displayTodoItems.js';
     function allItems() {
         
     
-        // Mevcut todo listesini temizleyin
+  
         const todoList = document.getElementById('todo-list');
         todoList.innerHTML = '';
 

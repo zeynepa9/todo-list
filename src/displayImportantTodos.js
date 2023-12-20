@@ -3,7 +3,7 @@ import displayTodoItems from './displayTodoItems.js';
 
 function displayImportantTodos() {
     const todoList = document.getElementById('todo-list');
-    todoList.innerHTML = ''; // Mevcut görevleri temizle
+    todoList.innerHTML = ''; 
 
     const projectList = document.getElementById('project-list');
         projectList.innerHTML = '';

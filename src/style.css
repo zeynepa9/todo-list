@@ -11,9 +11,8 @@ body, html {
     position: relative;
     display: inline-block;
     padding: 20px 40px;
-    /* color: #333; */
     color: white;
-    font-size: 32px; /* Metin boyutu */
+    font-size: 32px; 
     text-align: center;
     background: linear-gradient(135deg, #ff4081 20%, #f2d600 40%, #75c940 60%, #C740FF 80%);
     border-radius: 20px;
@@ -166,7 +165,7 @@ body, html {
     z-index: 1000; 
     max-width: 800px; /* Maksimum genişlik sınırı */
     min-width: 450px; /* Minimum genişlik sınırı */
-    height: auto; /* Yükseklik otomatik olarak ayarlanır */
+    height: auto; 
     max-height: 300px; /* Maksimum yükseklik sınırı */
     min-height: 100px; /* Minimum yükseklik sınırı */
   }
@@ -200,9 +199,9 @@ body, html {
 
 
 .todo-item.completed {
-  text-decoration: line-through; /* Üstünü çiz */
-  background-color: #f8f8f8; /* Hafif gri arka plan */
-  color: #b8b8b8; /* Metni soluk göster */
+  text-decoration: line-through; 
+  background-color: #f8f8f8;
+  color: #b8b8b8; 
 }
 
 
@@ -222,15 +221,15 @@ body, html {
 
 
 #project-form-container {
-  display: flex; /* Flexbox modelini kullanarak */
+  display: flex; 
   flex-direction: column; /* Çocukları dikey olarak hizala */
   align-items: stretch; /* Tüm çocukları genişlet ve kenarlarına kadar doldur */
   gap: 10px; /* Elemanlar arasında boşluk */
   padding: 20px; /* İç boşluk */
-  background-color: white; /* Arka plan rengi */
-  border: 1px solid #ccc; /* Kenarlık */
+  background-color: white; 
+  border: 1px solid #ccc; 
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Gölge efekti */
-  width: 400px; /* Genişlik */
+  width: 400px; 
   max-width: 100%; /* Genişlik maksimum %100 (ekran dar ise) */
 }
 
@@ -242,13 +241,13 @@ body, html {
 }
 
 #project-description-input {
-  height: 100px; /* Textarea yüksekliği */
+  height: 100px; 
 }
 
 #project-submit-button,
 #project-close-button {
-  padding: 10px 20px; /* İç boşluk */
-  cursor: pointer; /* İmleç şekli */
+  padding: 10px 20px; 
+  cursor: pointer; 
   border: 1px solid #ccc; /* Kenarlık */
   background-color: #f8f8f8; /* Arka plan rengi */
 }
@@ -304,7 +303,7 @@ body, html {
   display: inline-block;
   padding: 2px 8px;
   margin: 0 5px;
-  background-color: #CCCCCC; /* Geçici bir renk */
+  background-color: #CCCCCC; 
   color: white;
   border-radius: 12px;
   font-size: 12px;

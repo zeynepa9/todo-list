@@ -18,7 +18,7 @@ class Project {
 }
 
   
-  // Projeleri saklayacak bir liste oluşturun
+  // Projeleri saklayacak bir liste 
   const projects = [];
   
 
@@ -29,19 +29,19 @@ class Project {
     const description = document.getElementById('project-description-input').value;
     const dueDate = document.getElementById('project-due-date-input').value;
   
-    // Yeni bir Project nesnesi oluşturun
+    // Yeni bir Project nesnesi
     const newProject = new Project(name, description, dueDate);
   
-    // Projects listesine yeni projeyi ekleyin
+    // add projects to new  Projects list
     projects.push(newProject);
   
-    // Projeleri local storage'a kaydedin
+    // Projeleri local storage'a kaydet
     saveProjectsToLocalStorage();
   
-    // Yeni projeyi ekranda gösterin
+    // Yeni projeyi ekranda göster
     displayProjects(projects); 
 
-    // Form alanlarını temizleyin
+    // Form alanlarını temizle
     document.getElementById('project-title-input').value = '';
     document.getElementById('project-description-input').value = '';
     document.getElementById('project-due-date-input').value = '';
@@ -49,7 +49,7 @@ class Project {
     // close the form (creates a bug: cannot create another project without refreshing the page. reason: it removes items completely from the DOM.)
     // const formContainer = document.getElementById('project-form-container');
     // if (formContainer) {
-    //     formContainer.remove(); // Eğer formu tamamen kaldırmak istiyorsanız
+    //     formContainer.remove(); // Eğer formu tamamen kaldırmak istersem
     // }
 
 
@@ -65,8 +65,6 @@ class Project {
 }
   
  
-  // İhtiyacınız olan diğer fonksiyonları ve event listener'ları buraya ekleyin
-  
-  // Fonksiyonları ve değişkenleri dışa aktar
+
   export { submitProject, projects, Project };
   

@@ -1,4 +1,4 @@
-import { projects } from './submitProject.js'; // Projeleri içe aktar
+import { projects } from './submitProject.js'; 
 import { deleteProject } from './deleteProject.js';
 import displayProjectItems from './displayProjectItems.js';
 
@@ -10,7 +10,7 @@ function displayProjects(projectsToShow) {
       return;
   }
 
-  projectList.innerHTML = ''; // Mevcut listeyi temizle
+  projectList.innerHTML = ''; 
 
   // Sadece verilen projeleri dolaş ve arayüze ekle
   projectsToShow.forEach(project => {
@@ -33,7 +33,7 @@ function displayProjects(projectsToShow) {
     detailsButton.classList.add('details-project-button');
     detailsButton.dataset.projectId = project.id;
     detailsButton.addEventListener('click', function(event) {
-        // Burada todo-item'ları gösterme işlevini çağırabilirsiniz
+       
         displayProjectItems(event.currentTarget.dataset.projectId);
     });
 
@@ -43,7 +43,7 @@ function displayProjects(projectsToShow) {
       deleteButton.classList.add('delete-project-button');
       deleteButton.dataset.projectId = project.id;
       deleteButton.addEventListener('click', function(event) {
-          // Burada proje silme işlevini çağırabilirsiniz
+    
           deleteProject(event.currentTarget.dataset.projectId);
       });
 

@@ -15,10 +15,10 @@ class Todo {
   }
 }
 
-// Görevleri saklayacak bir liste oluşturun
+// Görevleri saklayacak bir liste 
 const todos = [];
 
-// Görev eklemek için bir işlev tanımlayın
+// Görev eklemek için bir işlev 
 function submitTodo(projectId) {
   // Input alanlarından değerleri al
   const title = document.getElementById('title').value;
@@ -26,29 +26,29 @@ function submitTodo(projectId) {
   const dueDate = document.getElementById('due-date').value;
   const priority = document.getElementById('priority').value;
 
-  // Yeni bir Todo nesnesi oluşturun
+  // Yeni bir Todo nesnesi 
   const newTodo = new Todo(title, description, dueDate, priority, projectId);
   // console.log('New todo id:', newTodo.id); 
 
-  // Todos listesine ekleyin
+  // Todos listesine ekle
   todos.push(newTodo);
 
-   // Todo'yu seçilen projeye ekleyin
+   // Todo'yu seçilen projeye ekle
   const selectedProject = projects.find(project => project.id === projectId);
   if (selectedProject) {
     selectedProject.todos.push(newTodo);
   } else {
-    // Varsayılan bir proje belirleyin veya hata fırlatın
+    // Varsayılan bir proje belirlenir veya hata fırlatılır
     console.error('Selected project not found');
   }
 
-  // Yeni todo'yu ekrana ekleyin
+  // Yeni todo'yu ekrana ekle
   displayTodoItems(newTodo);
 
-  // Local storage'a kaydedin
+  // Local storage'a kaydet
   saveTodosToLocalStorage();
 
-  // Formu kapatın
+  // Formu kapat
   const formContainer = document.getElementById('form-container');
   if (formContainer) {
     formContainer.remove();

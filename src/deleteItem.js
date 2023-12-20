@@ -6,7 +6,7 @@ function deleteItem(todoId) {
     // Todos dizisinde, verilen id ile eşleşen todo öğesinin index'ini bul
     const todoIndex = todos.findIndex(todo => todo.id === todoId);
 
-    // Eğer bu index mevcutsa, yani -1 değilse, todo öğesini bulduk demektir
+
     if (todoIndex !== -1) {
         // Todos dizisinden bu todo öğesini kaldır
         todos.splice(todoIndex, 1);
@@ -22,5 +22,5 @@ function deleteItem(todoId) {
     }
 }
 
-// Fonksiyonu dışa aktar, böylece başka dosyalardan import edilebilir
+
 export { deleteItem };

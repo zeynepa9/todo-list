@@ -1,9 +1,9 @@
-import { projects } from './submitProject.js'; // Projeleri içe aktar
+import { projects } from './submitProject.js'; 
 
 
 
 function displayProjectItems(projectId) {
-    // projectId'yi kullanarak ilgili projeyi bul
+    
     const project = projects.find(p => p.id === projectId);
     if (!project) {
       console.error('Project not found!');
@@ -11,13 +11,13 @@ function displayProjectItems(projectId) {
     }
   
     const todoListContainer = document.getElementById('todo-list'); // Todo listesinin görüntüleneceği konteyner
-    todoListContainer.innerHTML = ''; // Mevcut listeyi temizle
+    todoListContainer.innerHTML = ''; 
 
     console.log('alo');
     console.log('Project todos:', project.todos);
 
   
-    // Proje için todo-item'ları dolaş
+   
     project.todos.forEach(todo => {
       const todoItem = document.createElement('div');
       todoItem.classList.add('todo-item');
@@ -32,14 +32,10 @@ function displayProjectItems(projectId) {
 
  
   
-      // Diğer todo özelliklerini de benzer şekilde oluşturabilirsiniz
-      // ...
   
-      // Todo-item'ı konteynere ekle
       todoItem.appendChild(todoTitle);
       todoItem.appendChild(todoDescription);
-      // Diğer özellikleri de ekle
-      // ...
+      
   
       todoListContainer.appendChild(todoItem);
     });

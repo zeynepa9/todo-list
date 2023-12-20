@@ -5,6 +5,7 @@ module.exports = {
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
+    publicPath: '/todo-list/'  //  publicPath for  GitHub Pages 
   },
   module: {
     rules: [
@@ -12,7 +13,7 @@ module.exports = {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
       },
-      // Burada diğer kuralları ekleyebilirsiniz (örneğin resimler için)
+      
     ],
   },
 };

@@ -5,7 +5,7 @@ import displayTodoItems from './displayTodoItems.js';
 import displayProjects from './displayProjects.js';
 
 function displayToday() {
-    // Mevcut todo ve proje listesini temizleyin
+   
     const todoList = document.getElementById('todo-list');
     const projectList = document.getElementById('project-list');
     todoList.innerHTML = '';

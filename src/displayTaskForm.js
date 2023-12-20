@@ -1,9 +1,9 @@
 
 import { submitTodo } from './submitTodo.js'; 
-import { projects } from './submitProject.js'; // Projeleri içe aktar
+import { projects } from './submitProject.js';
 let activePopup = null; // Aktif pop-up'ı saklamak için bir değişken
 
-//new
+
 function displayTaskForm() {
 
     if (activePopup) {
@@ -56,8 +56,7 @@ function displayTaskForm() {
     notesInput.placeholder = 'Additional Notes';
 
 
-    //added
-  
+ 
   // Proje seçimi için dropdown menü
   const projectSelect = document.createElement('select');
   projectSelect.id = 'project-select';
@@ -78,7 +77,7 @@ function displayTaskForm() {
       }
   });
 
-    //added
+
   
    
     // Gönder buton
@@ -88,7 +87,7 @@ function displayTaskForm() {
     submitButton.type = 'button'; 
 
     submitButton.addEventListener('click', function(event) {
-        event.preventDefault(); // Form gönderimini engelleyin
+        event.preventDefault(); 
         const selectedProjectId = projectSelect.value;
         submitTodo(selectedProjectId); // Seçilen projenin ID'sini geçir
       });
@@ -104,7 +103,7 @@ function displayTaskForm() {
     formContainer.appendChild(notesInput);
     formContainer.appendChild(submitButton);
   
-    // Pop-up'ı kapatma butonu (opsiyonel)
+   
     const closeButton = document.createElement('button');
     closeButton.textContent = 'Close';
     closeButton.onclick = function () {

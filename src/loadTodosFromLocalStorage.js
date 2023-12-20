@@ -15,7 +15,7 @@ function loadTodosFromLocalStorage() {
               todoData.dueDate, 
               todoData.priority, 
               todoData.projectId,
-              todoData.projectName // Proje adı bilgisini Todo nesnesine ekleyin
+              todoData.projectName 
             );
             todo.completed = todoData.completed;
             todos.push(todo);

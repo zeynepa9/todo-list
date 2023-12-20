@@ -4,8 +4,7 @@ import displayTodoItems from './displayTodoItems.js';
 
 function displayCompletedTodos() {
     const todoList = document.getElementById('todo-list');
-    todoList.innerHTML = ''; // Mevcut görevleri temizle
-
+    todoList.innerHTML = ''; 
     const projectList = document.getElementById('project-list');
     projectList.innerHTML = '';
 

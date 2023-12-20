@@ -22,5 +22,5 @@ function deleteProject(projectId) {
     }
 }
 
-// Fonksiyonu dışa aktar, böylece başka dosyalardan import edilebilir
+
 export { deleteProject };
