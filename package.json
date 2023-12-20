@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1", 
+    "deploy": "git subtree push --prefix dist origin gh-pages",
+    "build": "webpack --mode production",
+    "start": "webpack serve --open"
   },
   "author": "",
   "license": "ISC",
@@ -18,3 +21,6 @@
     "date-fns": "^2.30.0"
   }
 }
+
+
+
