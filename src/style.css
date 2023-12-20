@@ -3,8 +3,9 @@
 body, html {
     margin: 0;
     padding: 0;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: Mina;
     background: #FCD7E9;
+    color: #5A5A5A;
   }
   
   .main-title {
