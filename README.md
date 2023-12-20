@@ -5,7 +5,7 @@ This project is a dynamic and modular to-do application that allows users to man
 
 
 
-![screenshot](/src/ss.png.jpg)
+![screenshot](/src/ss.png)
 
 
 ## Overview
