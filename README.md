@@ -2,6 +2,12 @@
 
 This project is a dynamic and modular to-do application that allows users to manage their daily tasks effectively. It was created as an assignment for The Odin Project's JavaScript curriculum, focusing on advanced JavaScript features, Web Storage API, and modern development workflows.
 
+
+
+
+![screenshot](/src/ss.png.jpg)
+
+
 ## Overview
 
 The TODO List app enables users to create, manage, and organize tasks within projects. Each task contains details such as title, description, due date, and priority level. The application offers a default project for initial tasks while allowing the creation of custom projects for better organization.
