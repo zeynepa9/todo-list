@@ -22,20 +22,22 @@ function displayProjects(projectsToShow) {
       projectName.textContent = project.name;
 
       const projectDescription = document.createElement('p');
+      projectDescription.classList.add('project-description');
       projectDescription.textContent = project.description;
 
       const projectDueDate = document.createElement('p');
+      projectDueDate.classList.add('project-due-date');
       projectDueDate.textContent = `Due Date: ${project.dueDate}`;
 
     // Details button
-    const detailsButton = document.createElement('button');
-    detailsButton.textContent = 'Details';
-    detailsButton.classList.add('details-project-button');
-    detailsButton.dataset.projectId = project.id;
-    detailsButton.addEventListener('click', function(event) {
+    // const detailsButton = document.createElement('button');
+    // detailsButton.textContent = 'Details';
+    // detailsButton.classList.add('details-project-button');
+    // detailsButton.dataset.projectId = project.id;
+    // detailsButton.addEventListener('click', function(event) {
        
-        displayProjectItems(event.currentTarget.dataset.projectId);
-    });
+    //     displayProjectItems(event.currentTarget.dataset.projectId);
+    // });
 
 
       const deleteButton = document.createElement('button');
@@ -51,7 +53,7 @@ function displayProjects(projectsToShow) {
       projectItem.appendChild(projectName);
       projectItem.appendChild(projectDescription);
       projectItem.appendChild(projectDueDate);
-      projectItem.appendChild(detailsButton);
+      // projectItem.appendChild(detailsButton);
       projectItem.appendChild(deleteButton);
 
       projectList.appendChild(projectItem);

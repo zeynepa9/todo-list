@@ -330,3 +330,32 @@ body, html {
   cursor: pointer;
   margin-left: 30px;
 }
+
+
+.todo-due-date, .project-due-date {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  background-color: #7c0665; /* Açık renkli arka plan */
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  color: #ededed;
+  margin-top: 5px;
+}
+
+
+.project-description{
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  background-color: #ffefd5; /* Açık renkli arka plan */
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.project-name{
+  font-size: 15px;
+  font-weight: bold;
+}
+

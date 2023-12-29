@@ -79,8 +79,9 @@ if (selectedProject) {
     todoDescription.textContent = todo.description;
     const todoDueDate = document.createElement('p');
     todoDueDate.textContent = `Due Date: ${todo.dueDate}`;
+    todoDueDate.classList.add('todo-due-date');
     const todoPriority = document.createElement('p');
-    todoPriority.textContent = `Priority: ${todo.priority}`;
+    todoPriority.textContent = `${todo.priority}`;
 
     // Delete button
     const deleteButton = document.createElement('button');
